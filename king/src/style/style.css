@@ -1,0 +1,23 @@
+.f-x{
+    display: flex;
+    flex-direction: row;
+}
+.f-y{
+    display: flex;
+    flex-direction: column;
+}
+.j-c-c{
+    justify-content: center;
+}
+.a-i-c{
+    align-items: center;
+}
+.j-c-a{
+    justify-content: space-around;
+}
+.j-c-b{
+    justify-content: space-between;
+}
+.j-c-e{
+    justify-content: flex-end;
+}
