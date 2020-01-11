@@ -1,0 +1,337 @@
+/* pages/index/payCheck/payCheck.wxss */
+@import "/static/style/common.wxss";
+
+.recharge {
+  background-color: #f5f5f5;
+}
+
+.det-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.img-jt {
+  width: 20rpx;
+  height: 40rpx;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  width: 710rpx;
+  padding: 0rpx 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.tab-tit {
+  flex: 1;
+  display: bolck;
+  height: 82rpx;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 82rpx;
+  text-align: center;
+  border-bottom: 4rpx solid #fff;
+}
+
+.active {
+  border-bottom: 4rpx solid #ff471e;
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.rech-text {
+  display: block;
+  padding: 30rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 30rpx;
+}
+
+.spac {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 650rpx;
+  height: 156rpx;
+  padding: 0rpx 40rpx 30rpx 60rpx;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  color: #000;
+}
+
+.symbol {
+  display: block;
+  height: 156rpx;
+  font-size: 60rpx;
+  line-height: 156rpx;
+  position: relative;
+  top: 8rpx;
+}
+
+.input {
+  flex: 1;
+  font-size: 80rpx;
+  height: 156rpx;
+  line-height: 156rpx;
+  padding-left: 15rpx;
+}
+
+.img-del {
+  width: 44rpx;
+  height: 44rpx;
+  position: relative;
+  top: 8rpx;
+}
+
+.confirmrecharge {
+  width: 590rpx;
+  padding: 100rpx 80rpx;
+  background-color: #f5f5f5;
+}
+
+.conchar-text {
+  display: block;
+  height: 88rpx;
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 88rpx;
+  background-color: #ff401f;
+  border-radius: 44rpx;
+  color: #fff;
+}
+
+.member {
+  background-color: #fff;
+}
+
+.state {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 670rpx;
+  padding: 25rpx 40rpx;
+  border-bottom: 2rpx solid #eee;
+  background-color: #fff;
+}
+
+.state-text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.list {
+  width: 690rpx;
+  padding: 20rpx 20rpx 30rpx 40rpx;
+}
+
+.list-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.wenzi {
+  flex: 1;
+  display: flex;
+  height: 116rpx;
+  padding-bottom: 29rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+}
+
+.des {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 16rpx;
+}
+
+.class {
+  font-size: 28rpx;
+  color: #000;
+  line-height: 42rpx;
+}
+
+.money {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 36rpx;
+}
+
+.btn {
+  position: relative;
+  top: 16rpx;
+  display: block;
+  width: 160rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  background-color: #ff3c1e;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 70rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+
+/* 视频会员充值 */
+
+.sort {
+  width: 640rpx;
+  padding: 30rpx 55rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.sort image {
+  width: 110rpx;
+  height: 110rpx;
+  margin-bottom: 20rpx;
+  background-color: #ccc;
+}
+
+.fontSmallGray {
+  font-size: 20rpx;
+  color: #626262;
+}
+
+.tel {
+  width: 670rpx;
+  padding: 25rpx 40rpx;
+  margin-bottom: 2rpx;
+  background-color: #fff;
+}
+
+.tel-tit {
+  font-size: 30rpx;
+  color: #959595;
+  line-height: 82rpx;
+}
+
+.tel input {
+  height: 60rpx;
+  padding-left: 5rpx;
+}
+
+.price {
+  width: 710rpx;
+  padding: 30rpx 20rpx;
+  background-color: #fff;
+}
+
+.priceItem {
+  width: 226rpx;
+  padding: 20rpx 0 10rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.price-text {
+  padding: 0 0 30rpx 20rpx;
+  font-size: 30rpx;
+  color: #646464;
+}
+
+.item-bot {
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #959595;
+}
+
+.typeItem {
+  width: 226rpx;
+  padding: 35rpx 0 35rpx 0;
+  background-color: #f6f6f6;
+}
+
+.type-txt {
+  color: #959595;
+}
+
+.selBtn {
+  width: 750rpx;
+  padding: 115rpx 0;
+  background-color: #fff;
+}
+
+.btn-txt {
+  width: 603rpx;
+  padding: 30rpx 0;
+  background-color: #959595;
+  color: #fff;
+  font-size: 40rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+
+/* 话费充值 */
+
+.telphone {
+  width: 670rpx;
+  padding: 30rpx 40rpx 26rpx 40rpx;
+  margin-bottom: 2rpx;
+  align-items: flex-start;
+  background-color: #fff;
+}
+
+.telphone input {
+  height: 60rpx;
+}
+
+.money {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 36rpx;
+}
+
+.telItem {
+  flex-wrap: wrap;
+}
+
+.tel-btn {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background-color: #ff3c1e;
+  margin-top: 10rpx;
+}
+/* 选择与未选择 */
+.selBorder {
+  border: 1rpx solid #ff3c1e;
+}
+
+.noSelBorder {
+  border: 1rpx solid #f6f6f6;
+}
+.selColor {
+  color: #ff3c1e;
+}
+
+.noSelColor {
+  /* color: #cacaca; */
+}
+.selBgc {
+  background-color:#fff;
+}
+
+.noSelBgc {
+  background-color:#f6f6f6;
+}

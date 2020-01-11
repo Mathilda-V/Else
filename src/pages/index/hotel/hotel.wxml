@@ -1,0 +1,141 @@
+<!--pages/hotel/hotel.wxml-->
+<view class='hotel'>
+  <!-- 酒店背景 -->
+  <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}"
+autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{img}}" wx:key="">
+      <swiper-item>
+        <image src="{{item}}" class="slide"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 房间类型 -->
+  <view class='room'>
+    <view class='room-change'>
+      <text class='cla {{[tabIndex==index?"cla-spe":""]}} {{[index == 0?"cla1":"cla2"]}}' wx:for="{{tabTit}}" wx:key="" data-index="{{index}}" bindtap='bindTab'>{{item}}</text> 
+    </view>
+    <!-- 房间位置 -->
+    <view class='room-ui'>
+      <view class='site-left'>武汉</view>
+      <view class='site-right'>
+        <view class='site-pic'></view> 
+        <view class='site-near'>我的附近</view>
+      </view>
+    </view>
+    <!-- 入住时间 -->
+    <view class='room-ui room-time'>
+      <view class='time-day'>
+        <view class='time-top'>今天入住</view>
+        <view class='time-bottom'>
+          <view class='time-date'>6月27日</view>
+          <view class='time-week'>周三</view>
+        </view>
+      </view>
+      <view class='time-day' wx:if="{{all}}">
+        <view class='time-top'>明天离店</view>
+        <view class='time-bottom'>
+          <view class='time-date'>6月28日</view>
+          <view class='time-week'>周四</view>
+        </view>
+      </view>
+      <view class='time-all' wx:if="{{all}}">共1晚</view>           
+    </view>
+    <!-- 搜索栏 -->
+    <view class='room-ui room-search'>
+      <view class='search-img'></view>      
+      <!-- <image class='search-img' src="/static/img/"></image> -->
+      <input class='search-txt' placeholder='商家、品类、商圈'></input>
+    </view>
+    <!-- 搜索按钮 -->
+    <view class='room-btn'>查找酒店</view> 
+  </view>
+  <!-- 酒店类型 -->
+  <view class='icon'>
+    <view class='icon-con' wx:for="{{icon}}" wx:key="">
+      <view class='icon-pic'></view>
+      <text class='icon-txt'>{{item.txt}}</text>  
+    </view>
+  </view>  
+  <!-- 分类搜索 -->
+  <view class='topic'>
+    <view class='genre' wx:for="{{topic}}" wx:key="">
+      <text class='genre-txt'>{{item}}</text>
+      <view class='genre-btn'></view>
+    </view>
+  </view>
+  <!-- 酒店详情 -->
+  <view class='details'>
+    <view class='con-top'>
+      <view class='con-pic'></view>
+      <view class='con-txt'>
+        <view class='txt-top'>
+          <text class='top-ui'>7天连锁酒店(南湖书城路店)</text>
+          <view class='top-pic'></view>
+        </view>
+        <view class='txt-middle'>
+          <view class='middle-pic'></view>
+          <text class='middle-ui'>1000+人消费是 | 经济型</text>
+        </view>
+        <view class='txt-middle'>
+          <text class='middle-ui'>距您500m， 洪山区</text>
+        </view>
+        <view class='txt-bottom'>
+        <view class='bottom-left'>
+          <text class='bottom-txt'>￥137</text>
+          <text class='bottom-txt txt-spe'>起</text>        
+        </view>
+         <view class='bottom-num'> 最低价仅剩1间</view> 
+        </view>    
+        <text class='txt-else'>预约发票</text>   
+      </view>
+    </view>
+  </view>
+
+  <view class='details'>
+    <view class='con-top'>
+      <view class='con-pic'></view>
+      <view class='con-txt'>
+        <view class='txt-top'>
+          <text class='top-ui'>7天连锁酒店(南湖书城路店)</text>
+          <view class='top-pic'></view>
+        </view>
+        <view class='txt-middle'>
+          <view class='middle-pic'></view>
+          <text class='middle-ui'>1000+人消费是 | 经济型</text>
+        </view>
+        <view class='txt-middle'>
+          <text class='middle-ui'>距您500m， 洪山区</text>
+        </view>
+        <view class='txt-bottom'>
+        <view class='bottom-left'>
+          <text class='bottom-txt'>￥137</text>
+          <text class='bottom-txt txt-spe'>起</text>        
+        </view>
+         <view class='bottom-num'> 最低价仅剩1间</view> 
+        </view>    
+        <text class='txt-else'>预约发票</text>   
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 底部 -->
+<view class='bottom icon'>
+  <view class='icon-con'>
+    <view class='icon-pics'></view>
+    <text class='icon-txt'>酒店预订</text>
+  </view>
+      <view class='icon-con'>
+    <view class='icon-pics'></view>
+    <text class='icon-txt'>住过/收藏</text>
+  </view>
+  <view class='icon-con'>
+    <view class='icon-pics'></view>
+    <text class='icon-txt'>订单</text>
+  </view>
+  <view class='icon-con'>
+    <view class='icon-pics'></view>
+    <text class='icon-txt'>个人中心</text>
+  </view>
+</view>

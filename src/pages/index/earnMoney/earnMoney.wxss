@@ -1,0 +1,61 @@
+@import "/static/style/common.wxss";
+
+.switch{
+  width: 750rpx;
+  background-color: #ffffff;
+}
+.switch-item {
+  padding: 0 20rpx;
+}
+.switch-text {
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.active{
+  border-bottom: 4rpx solid #ff5a33;
+  color: #ff5a33;
+}
+
+.goods-item{
+  display: flex;
+  align-items: center;
+}
+.goods-img{
+  width: 240rpx;
+  height: 240rpx;
+  background-color: #dddddd;
+}
+.goods-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10rpx;
+  height: 240rpx;
+  max-width:430rpx;
+  margin-left: 20rpx;
+  box-sizing: border-box;
+}
+.down-time{
+  min-width: 200rpx;
+  display: flex;
+}
+.share{
+  background-color: #ff472f;
+  border-radius: 10rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  padding: 0 14rpx;
+}
+
+.icon{
+  width: 36rpx;
+  height: 36rpx;
+}
+.icon-jt{
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}

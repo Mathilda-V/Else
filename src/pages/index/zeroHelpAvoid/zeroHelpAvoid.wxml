@@ -1,0 +1,31 @@
+<!--pages/zeroHelpAvoid/zeroHelpAvoid.wxml-->
+<view class='zeroHelpAvoid'>
+  <view class='head'>
+    <view class='rule'>
+      <text class='rule-txt'>活动规则</text>
+      <image class='img-jt' src='/static/img/icon21@3x.png'></image>
+    </view>
+  </view>
+  <view class='container'>
+    <view class='goods' wx:for="{{activity_list}}" wx:key="">
+      <image class='goodspit' src='{{item.thumbnail}}'></image>
+      <view class='goods-det'>
+        <text class='goods-title'>{{item.title}}</text>
+        <view class='goods-fun'>
+          <text class='goodsPrice'>￥{{item.price}}</text>
+          <text class='participation'>1346人参与</text>
+        </view>
+        <view class='goods-fnu'>
+         <view class="participate">
+          <image class='img-sz' src='/static/img/shijian@3x.png'></image>
+          <text class='participateTime'>{{item.countDownTime}}</text>
+         </view>
+          <view class='zeroSnatch {{item.status == 1?"":(item.status==2?"active":"end")}}' bindtap='toDetail'>
+            <text class='zeroText'>{{item.statusText}}</text>
+            <image class='img-jt' src='/static/img/icon21@3x.png' wx:if="{{item.status == 1?true:false}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

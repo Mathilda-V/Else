@@ -1,0 +1,128 @@
+<!--pages/index/index.wxml-->
+<view class='index'>
+  <!-- 搜索栏 -->
+  <view class='top'>
+    <view class='site'>
+      <image class='site-img' src="/static/img/icon31@3x.png"></image>
+      <text class='site-txt' bindtap="toCity">{{addressCity}}</text>
+    </view>
+    <view class='search' bindtap="toSearch">    
+      <image class='search-img' src="/static/img/search@3x.png"></image>
+      <input class='search-txt' placeholder='商家、品类、商圈' disabled ></input>
+    </view>
+  </view>
+  <!-- 大图片 -->
+  <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{4000}}" duration="{{500}}" class="swiper">
+    <block wx:for="{{ad_list}}" wx:key="item">
+      <swiper-item>
+        <image class="pic" src="{{item.image}}" data-item="{{item}}" bindtap='bindweb'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 菜单按钮 -->
+  <view class='menu'>
+    <view class="menu-con" bindtap="toRushBuy">
+      <image class='con-img' src="/static/img/qiang@3x.png"></image>
+      <text class='con-name'>就要抢</text>
+    </view>
+    <view class='menu-con' bindtap="toEarnMoney">
+      <image class='con-img' src="/static/img/zhuan@3x.png"></image>
+      <text class='con-name'>赚币大厅</text>
+    </view>
+    <view class='menu-con' bindtap="toZeroBuy">
+      <image class='con-img' src="/static/img/zu@3x.png"></image>
+      <text class='con-name'>助力免单</text>
+    </view>
+    <view class='menu-con'>
+      <image class='con-img' src="/static/img/chong@3x.png" bindtap='toPay'></image>
+      <text class='con-name'>充值中心</text>
+    </view>
+    <view class='menu-con'>
+      <image class='con-img' src="/static/img/gengduo@3x.png" bindtap='toMore'></image>
+      <text class='con-name'>更多</text>
+    </view>
+  </view>
+  <!-- 0元抢 -->
+  <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{4000}}" duration="{{500}}" class="zero">
+    <block wx:for="{{ads_list}}" wx:key="item">
+      <swiper-item>
+        <image class="zero-img" src="{{item.image}}" data-item="{{item}}" bindtap="toZeroBuy"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <view class='zero' bindtap="toZeroBuy">
+    <image class='zero-img' src="/static/img/zuli.jpg"></image>
+  </view> -->
+  <!-- 猜你会兑 -->
+  <view class='must'>
+    <view class='must-title'>
+      <view class='must-pic'>
+        <image class='title-pic' src="/static/img/panicStatus3@3x.png"></image>
+        <text class='nust-text'>猜你会兑</text>
+      </view>
+    </view>
+    <view 
+      class='must-con'
+      wx:if="{{index<5}}"
+      wx:for="{{productList}}" 
+      wx:key="item"
+      data-product="{{item}}"
+      bindtap='toProductDetail'>
+      <image class='con-pic' src="{{item.thumbnail}}"></image>
+      <view class='con-txt'>
+        <text class='normal-black-less'>{{item.title}}</text>
+        <view class="between">
+          <text class='bottom-num'>￥{{item.price}}</text>
+          <text class='bottom-right'>{{item.sellNum}}人已兑</text>
+          <!-- <view class='bottom-btn'>
+            <text class='btn-ui'>马上抢</text>
+            <image class='btn-pic' src="/static/img/icon21@3x.png"></image>
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 附近商家 -->
+  <view class='near'>
+    <view class='near-title'>
+      <view class='near-pic'>
+        <image class='titl-pic' src="/static/img/shop32@3x.png"></image>
+        <text class='near-text'>附近商家</text>
+      </view>
+    </view>
+    <view class='near-big'>
+      <swiper class="big" indicator-dots="{{indicatorDots[0]}}" indicator-active-color="{{indicatorActiveColor[0]}}"
+  autoplay="{{autoplay[0]}}" interval="{{interval[0]}}" duration="{{duration}}" circular="{{circular[0]}}">
+        <block wx:for="{{hot_shop_list}}" wx:key="">
+          <swiper-item class='swiper-item-hot'>
+            <view class='hot-shop' data-info="{{item}}" bindtap='toBigshop'>
+              <view class='hot-shop-detail'>
+                <image class='hot-shop-logo' src="{{item.logo}}"></image>
+                <text class='catName'>{{item.name}}</text>
+                <view class='distance'>
+                  <image class='logo' src="/static/img/jqd_03@3x.png"></image>
+                  <text class='distanceText'><text class='symb'>＜</text>{{item.distance}}</text>
+                </view>
+              </view>
+              <image class='hot-shop-url' src="{{item.images[0].url || '/static/img/jqd@3x.png'}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='near-small'>
+      <swiper class="small" indicator-dots="{{indicatorDots[1]}}" indicator-active-color="{{indicatorActiveColor[1]}}"
+  autoplay="{{autoplay[1]}}" interval="{{interval[1]}}" duration="{{duration}}" circular="{{circular[1]}}">
+        <block wx:for="{{shop_list}}" wx:key="">
+          <swiper-item >
+            <view class="slideItem">
+              <view class="slideSmall" wx:for="{{item}}" wx:for-item="v" wx:key="">
+                <image class='shop-logo' src='{{v.logo}}' data-info="{{item[index]}}" bindtap='toSmallshop'></image>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,71 @@
+<view class="search">
+  <view class='header'>
+    <view class='head'>
+      <view class='tab' bindtap='bindTab'>
+        <text class='tabText'>{{tabText}}</text>
+        <image class='tab-img' src="/static/img/xiabiao@3x.jpg"></image>
+        <view class='options' wx:if="{{tabShow}}">
+          <view class='sub-opt' catchtap='bindbaobei'>
+            <image class='img-tb' src="/static/img/babyallno@3x.png"></image>
+            <text class='sub-name'>宝贝</text>
+          </view>
+          <view class='sub-opt' catchtap='binddianpu'>
+            <image class='img-tb' src="/static/img/babyindexno@3x.png"></image>
+            <text class='sub-name'>店铺</text>
+          </view>
+        </view>
+      </view>
+      <input class='searchBar' placeholder='商家、品类、商圈' focus value='{{keyword}}' bindinput="bindKeyInput"></input>
+    </view>
+    <text class='searchText' bindtap='bindSearch'>搜索</text>
+  </view>
+  <view class='container'>
+    <view class='goods' wx:for="{{product_list}}" wx:key="" wx:if="{{tabText == '宝贝'?true:false}}" data-item="{{item}}" bindtap='toDetail'>
+      <image class='img-pit' src="{{item.thumbnail}}"></image>
+      <view class='det'>
+        <text class='goods-tit'>{{item.title}}</text>
+        <text class='price'>
+          <text class='sellPrice'>￥{{item.discountPrice}}</text>
+          <text class='sellren'>{{item.sellNum}}人付款</text>
+        </text>
+        <view class='goods-shop' data-item="{{item}}" catchtap='toGoodsShop'>
+          <text class='goods-shop-name'>{{item.shop.name}}</text>
+          <image class='img-jt' src="/static/img/icon21@3x.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class='shop' wx:for="{{shop_list}}" wx:key="" wx:if="{{tabText == '店铺'?true:false}}" data-item="{{item}}" bindtap='toShop'>
+      <!-- <view class='shop-head'>
+        <view class='shop-tit'>
+          <image class='shop-logo'></image>
+          <text class='shop-name'>{{item.name}}</text>
+        </view>
+        <text class='enterStore'>进店</text>
+      </view>
+      <view class='shop-goods'>
+        <view class='block'>
+          <image class='shop-goods-pit'></image>
+          <text class='shop-goods-price'>￥20.0</text>
+        </view>
+      </view> -->
+      <image class='img-logo' src="{{item.shopLogo}}"></image>
+      <view class='det'>
+        <text class='shop-name'>{{item.name}}</text>
+        <view class='shop-fun'>
+          <view class='start flex gray'>
+            <view class='abOrange' style="width:{{item.comment_score*28}}rpx"></view>
+            <image class='shop-score' src='/static/img/start@3x.png'></image>
+          </view> 
+          <text class='shop-dsc'>
+            <text class='cat_name'>{{item.cat_name}}</text>
+            <text class='addressIndex'>{{item.addressIndex}}</text>
+          </text>
+        </view>
+        <view class='bear'>
+          <text class='perCost'>￥{{item.perCost}}/人</text>
+          <text class='distance'>距离{{item.distance}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

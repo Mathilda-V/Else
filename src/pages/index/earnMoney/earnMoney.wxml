@@ -1,0 +1,62 @@
+<view class="wrapper">
+  <view class="switch row">
+    <view 
+      class="switch-item" 
+      wx:for="{{taskMenu}}" 
+      wx:key="index" 
+      data-index="{{index}}" 
+      data-cateid="{{item.id}}"
+      data-name="{{item.name}}"
+      bindtap="switchItem">
+      <text class="normal-gray switch-text {{currentIndex == index ? 'active' : ''}}" wx:if="{{item.name !== '下载有礼'}}">{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class="main">
+    <view class="item-white bottom-line row" wx:for="{{taskList}}" wx:key="index" bindtap="toShare">
+      <image class="goods-img" src="{{item.cover}}"/>
+      <view class="goods-info" wx:if="{{currentMenu == taskMenu[0].name}}">
+        <view>
+          <text class="normal-black-wide line-2">{{item.name}}</text>
+          <text class="normal-orange">奖励: {{item.invitedPoint}}节钞/人</text>
+        </view>
+        <view class="between">
+          <view class="down-time">
+            <image class="icon" src="/static/img/shijian@3x.png"/>
+            <text class="small-gray left-space">{{item.countDownTime}}</text>
+          </view>
+          <view class="row share" data-item="{{item}}" bindtap='toTaskInfoDetail'>
+            <text class="small-white">立即分享</text>
+            <image class="icon-jt" src="/static/img/icon21x@3x.png"/>
+          </view>
+        </view>
+      </view>
+
+      <view class="goods-info" wx:elif="{{currentMenu == taskMenu[1].name}}" data-product="{{item}}" bindtap="toDetail">
+        <view class='Til'>
+          <text class="normal-black-wide line-2">{{item.product_info.title}}</text>
+          <text class="small-gray line-1 ">{{item.product_info.subtitle}}</text>
+        </view>
+        <view class="between">
+          <view class="row">
+            <text class="small-orange">￥</text>
+            <text style="font-size:40rpx;color:#ff5a33;">{{item.product_info.price}}</text>
+          </view>
+          <view class="down-time">
+            <image class="icon" src="/static/img/shijian@3x.png"/>
+            <text class="small-gray left-space">{{item.countDownTime}}</text>
+          </view>
+        </view>
+        <view class="between">
+          <view class="row">
+            <text class="normal-orange">返{{item.invitedPoint}}节钞</text>
+          </view>
+          <view class="row share">
+            <text class="small-white">立即购买</text>
+            <image class="icon-jt" src="/static/img/icon21x@3x.png"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

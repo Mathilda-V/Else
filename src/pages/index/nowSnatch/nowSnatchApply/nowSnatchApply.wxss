@@ -1,0 +1,95 @@
+/* pages/apply/apply.wxss */
+.apply {
+  width: 750rpx;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.bgc {
+  width: 750rpx;
+  height: 336rpx;
+  background-color: #753dde;
+  position: relative;
+}
+.bgc-con {
+  width: 260rpx;
+  height: 150rpx;
+  padding: 23rpx 0 0 50rpx;
+}
+.con-top {
+  display: flex;
+  align-items: center;
+}
+.top-pic {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #ccc;
+  margin-right: 10rpx;
+}
+.top-txt {
+  font-size: 60rpx;
+  color: #fff;
+}
+.con-bottom {
+  font-size: 40rpx;
+  color: #fff;
+}
+.table {
+  width: 750rpx;
+  background-color: #f5f5f5;
+}
+.table-con {
+  position: relative;
+  top: -80rpx;
+  left:20rpx;
+  width: 670rpx;
+  padding: 70rpx 10rpx 50rpx 30rpx;
+  border-radius: 20rpx;
+  background-color: #fff;  
+}
+.con {
+  display: flex;
+  align-items: center;
+  width: 670rpx;
+  padding: 35rpx 0 30rpx 0;
+  margin-bottom: 2rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.con-left {
+  width: 200rpx;
+  font-size: 30rpx;
+}
+.con-right {
+  width: 430rpx;
+  font-size: 30rpx;
+}
+.right-spe {
+  color: #959595;
+}
+.con-pic {
+  width: 28rpx;
+  height: 28rpx;
+  background-color: #ccc;
+}
+.con-spe {
+  width: 670rpx;
+  height: 150rpx;
+  padding-top: 20rpx;
+  font-size: 30rpx;
+}
+.table-btn {
+  width: 525rpx;
+  height: 88rpx;
+  margin: 10rpx 70rpx;
+  /* background-color: #ff3f1e; */
+  background: linear-gradient(to right, #ff5923 0%,#ff3f1e 100%);
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+.btn-ui {
+  font-size: 40rpx;
+  color: #fff;
+}
+.pic-else {
+
+}

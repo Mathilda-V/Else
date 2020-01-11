@@ -1,0 +1,82 @@
+<!--pages/index/payCheck/payCheck.wxml-->
+<view class='recharge'>
+  <!-- <view class='tab'>
+    <text class='tab-tit {{[tabIndex==index?"active":"a"]}}' wx:for="{{tabTit}}" wx:key="" data-index="{{index}}" bindtap='bindTab'>{{item}}</text>
+  </view> -->
+  <!-- 会员充值 -->
+  <view class='general' wx:if="{{general}}">
+    <view class='state'>
+      <text class='state-text'>会员充值说明</text>
+      <image src='/static/img/icon21@3x.png' style='width:22rpx;height:34rpx'></image>
+    </view>
+    <view class='list'>
+      <view class='list-block' wx:for="{{memberList}}" wx:key="">
+      <image class='logo' src='{{item.url}}'></image>
+        <view class='wenzi'>
+          <view class='des'>
+            <text class='class'>{{item.title == "T1" ? "" : "V"}}{{item.title}}会员</text>
+            <text class='money'>{{item.jiechao}}节钞/月</text>
+          </view>
+          <text class='btn' bindtap='toGeneralPay' data-info="{{item}}">￥{{item.money}}/月</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 视频会员充值 -->
+  <view class='member' wx:if="{{member}}">
+    <view class='state'>
+      <text class='state-text'>视频分类</text>
+    </view>
+    <view class="between sort">
+      <view class='column column-center' wx:for="{{sort}}" wx:key="" data-index="{{index}}" bindtap='selSort'>
+        <image class="{{item.check?'selBorder':'noSelBorder'}}" src='{{item.logo}}'></image>
+        <text class="fontSmallGray {{item.check?'selColor':'noSelColor'}}">{{item.name}}</text>
+      </view>
+    </view>
+    <view class='column tel'>
+      <text class='tel-tit'>优酷VIP会员账号</text>
+      <input placeholder='请输入手机号或者邮箱'></input>
+    </view>
+    <view class='column price'>
+      <text class='price-text'>面额</text>
+      <view class='between telItem'>
+        <view class="column column-center priceItem {{item.check?'selBgc selBorder':'noSelBgc noSelBorder'}}" wx:for="{{money}}" wx:key="" data-index="{{index}}" bindtap='selPrice'>
+          <text class="{{item.check?'selColor':'noSelColor'}}">{{item.time}}个月</text>
+          <text class="item-bot {{item.check?'selColor':'noSelColor'}}">售价{{item.price}}元</text>
+        </view>
+      </view>
+    </view>
+    <view class='column price type'>
+      <text class='price-text'>充值类型</text>
+      <view class='between'>
+        <view class='column column-center typeItem' wx:for="{{type}}" wx:key="" data-index="{{index}}" bindtap='selType'>
+          <text class="type-txt {{item.check?'selColor':'noSelColor'}}">{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='selBtn row justify'>
+      <text class='btn-txt'>立即充值</text>
+    </view>
+  </view>
+  <!-- 话费充值 -->
+  <view class='merchant' wx:if="{{merchant}}">
+    <view class='state'>
+      <text class='state-text'>充值号码</text>
+    </view>
+    <view class='telphone between'>
+      <view class='column'>
+        <input placeholder='123123123123'></input>
+        <text class='money'>默认号码(湖北武汉移动)</text>
+      </view>
+      <image class='tel-btn'></image>
+    </view>
+    <view class= 'price'>
+      <view class='between telItem'>
+        <view class="column column-center priceItem {{item.check?'selBgc selBorder':'noSelBgc noSelBorder'}}" wx:for="{{tel}}" wx:key="">
+          <text class="{{item.check?'selColor':'noSelColor'}}">{{item.price}}元</text>
+          <text class="item-bot {{item.check?'selColor':'noSelColor'}}">售价{{item.count}}元</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

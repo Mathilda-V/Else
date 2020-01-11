@@ -1,0 +1,102 @@
+<!--pages/snatchReady/snatchReady.wxml-->
+<!--pages/goodsSnatch/mustSnatch.wxml-->
+<view class='mustSnatch'>
+  <!-- 标题 -->
+  <!-- <view class='head'>
+    <view class='back'></view> 
+    <view class='title'>
+      <text class='title-ui'>就要抢</text>
+    </view>
+  </view> -->
+  <!-- 图片 -->
+  <view class='pic'></view>
+  <!-- 时间段 --> 
+  <view class='timeCount'>
+    <view class='count'>
+      <view class='date-top'>10:00</view>
+      <text class='date-bottom'>即将开场</text>
+    </view>
+    <view class='count'>
+      <view class='date-top'>10:00</view>
+      <text class='date-bottom'>即将开场</text>
+    </view>
+    <view class='count spe'>
+      <view class='date-top'>10:00</view>
+      <text class='date-bottom'>抢购进行时</text>
+    </view>
+    <view class='count'>
+      <view class='date-top'>10:00</view>
+      <text class='date-bottom'>即将开场</text>
+    </view>
+    <view class='count'>
+      <view class='date-top'>10:00</view>
+      <text class='date-bottom'>即将开场</text>
+    </view>        
+  </view>
+  <view class='count-else'>
+    <view class='else-box'></view>
+    <text class='else-txt'>距离开始仅剩</text>
+    <view class='else-time'>01:32:45</view>
+    <view class='else-box'></view>
+  </view>
+  <!-- 抢购 -->
+  <view class='goods'>
+    <view class='goods-con'>
+      <view class='con-pic'></view>
+      <view class='con-txt'>
+        <view class='txt-top'>
+          <text class='top-ui'>积分夏季新款运动休的鞋子</text>
+        </view>
+        <view class='txt-middle'>
+          <text class='middle-ui'>纯棉柔软，亲肤不刺激</text>
+        </view>
+        <view class='txt-bottom'>
+            <text class='bottom-ui'>￥</text>
+            <text class='bottom-ui bottom-spe'>3,290.5</text>
+            <text class='bottom-ui1'>￥</text>
+            <text class='bottom-ui1 bottom-spe1'>4890.00</text>
+        </view>
+      </view>
+    </view> 
+    <view class='line'></view>
+    <view class='progress'>
+      <view class='pro-pic'></view>
+      <text class='pro-num'>702人</text>
+      <text class='pro-num'>已关注</text>
+      <view class='pro-btn'>
+        <view class='btn-pic'></view>          
+        <text class='btn-ui'>提醒我</text>
+      </view>
+    </view>         
+  </view>
+
+  <view class='goods'>
+    <view class='goods-con'>
+      <view class='con-pic'></view>
+      <view class='con-txt'>
+        <view class='txt-top'>
+          <text class='top-ui'>积分夏季新款运动休的鞋子</text>
+        </view>
+        <view class='txt-middle'>
+          <text class='middle-ui'>纯棉柔软，亲肤不刺激</text>
+        </view>
+        <view class='txt-bottom'>
+            <text class='bottom-ui'>￥</text>
+            <text class='bottom-ui bottom-spe'>3,290.5</text>
+            <text class='bottom-ui1'>￥</text>
+            <text class='bottom-ui1 bottom-spe1'>4890.00</text>
+        </view>
+      </view>
+    </view> 
+    <view class='line'></view>
+    <view class='progress'>
+      <view class='pro-pic'></view>
+      <text class='pro-num'>702人</text>
+      <text class='pro-num'>已关注</text>
+      <view class='pro-btn'>
+        <view class='btn-pic'></view>          
+        <text class='btn-ui'>提醒我</text>
+      </view>
+    </view>         
+  </view>
+</view>

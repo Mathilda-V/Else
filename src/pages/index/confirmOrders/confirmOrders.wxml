@@ -1,0 +1,56 @@
+<!--pages/index/confirmOrders/confirmOrders.wxml-->
+<view class='confirm-order'>
+  <view class='kuang'></view>
+  <view class='ress'>
+    <view class='address' bindtap='toAddmanage'>
+      <image class='img-dz' src="/static/img/ditu@3x.png"></image>
+      <view class='address-l'>
+        <view class='user' wx:if="{{addr_list.length == 0?false:true}}">
+          <text class='user-text'>收件人: {{addr_list[addrIndex].receName}}</text>
+          <text class='user-text'>{{addr_list[addrIndex].receMobile}}</text>
+        </view>
+        <view class='add' wx:if="{{addr_list.length == 0?false:true}}">
+          <text class='add-text'>收货地址:</text>
+          <text class='add-txt'>{{addr_list[addrIndex].receAddr}}</text>
+        </view>
+        <text class='addrText' wx:if="{{addr_list.length == 0?true:false}}">点击，请填写你的收货详情地址</text>
+      </view>
+      <image class='img-jt' src="/static/img/icon21@3x.png"></image>
+    </view>
+    <image class='img-ad' src="/static/img/addressD@3x.png"></image>
+  </view>
+  <view class='sh-type'>
+    <image class='img-sh' src="/static/img/fahuo@3x.png"></image>
+    <text class='sh-text'>收货类型:</text>
+    <text class='sh-btn {{TabIndex == index?"active":"" }}' wx:for="{{shType}}" wx:key="" data-index="{{index}}" bindtap='bindTab'>{{item}}</text>
+  </view>
+  <view wx:for="{{list}}" wx:key="" class='order'>
+    <view class='shop'>
+      <image class='img-shop' src="/static/img/icon32@3x.png"></image>
+      <text class='shop-text'>{{item.shopName}}</text>
+    </view>
+    <view class='goods' wx:for="{{list[index].cart_product_list}}" wx:key="">
+      <image class='img-goods' src="{{item.thumbnail}}"></image>
+      <view class='goods-text'>
+        <text class='goods-tit'>{{item.title}}</text>
+        <view class='goods-fun'>
+          <text class='goods-nature'>{{item.propertiesName}}</text>
+          <text class='goods-num'>X{{item.number}}</text>
+        </view>
+        <text class='goods-price'>￥{{item.price}} <!-- <text class='oldprice'>￥969.00</text> --></text>
+      </view>
+    </view>
+    <view class='freight'>
+      <text class='modal-text'>运费</text>
+      <text class='modal-text'>￥10</text>
+    </view>
+    <view class='leave-word'>
+      <text class='modal-text'>买家留言:</text>
+      <textarea class="textarea" bindinput="bindTextAreaBlur" auto-height value='{{descri}}' placeholder="如有特殊配送要求，请在此填写附言。" />
+    </view>
+  </view>
+  <view class='footer'>
+    <text class='total'>合计: ￥{{totalAmount}}</text>
+    <text class='submit' bindtap='postOrder'>提交订单</text>
+  </view>
+</view>

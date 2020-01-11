@@ -1,0 +1,27 @@
+<!--pages/index/city/city.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height: 1250rpx;" scroll-with-animation="true" scroll-into-view="{{toView}}">
+    <view class="city-container">
+      <view class="current-container">
+        <view class="icon2"></view>
+        <text class="current-city">{{addressCity}}</text>
+        <text class="gray">GPS定位</text>
+      </view>
+      <view class="hot-container">
+        <view class="gray title1">国内访问城市</view>
+        <view class="list-box">
+          <view class="city-block" wx:for="{{hotCity}}" bindtap="toIndex" wx:key="" data-city="{{item}}">{{item.name}}</view>
+        </view>
+      </view>
+      <view class="city-list-container">
+        <view wx:for="{{allCity}}" class="list-item" wx:key="">
+          <view id="{{item.order}}" class="gray">{{item.order}}</view>
+          <view wx:for="{{item.citys}}" wx:for-item="citys" bindtap="toIndex" data-city="{{citys}}" wx:key="">{{citys.name}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="right-nav">
+    <view bindtap="anchorNav" wx:for="{{allCity}}" data-id="{{item.order}}" wx:key="">{{item.order}}</view>
+  </view>
+</view>

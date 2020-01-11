@@ -1,0 +1,66 @@
+.gray {
+  color: #999;
+}
+.city-container {
+  padding-left: 10rpx;
+  line-height: 64rpx;
+  background: #fff;
+  font-size: 28rpx;
+}
+.current-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  height: 80rpx;
+}
+.icon2 {
+  width: 38rpx;
+  height: 38rpx;
+  background: #ccc;
+}
+.current-city {
+  padding: 0 10rpx;
+  font-size: 40rpx;
+}
+.title1 {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  line-height: 38rpx;
+}
+.list-box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.hot-container {
+  width: 750rpx;
+}
+.city-block {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 210rpx;
+  height: 64rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  text-align: center;
+}
+.city-list-container {
+  margin: 50rpx 35rpx 0 25rpx;
+  background: #fff;
+  border-top: 1rpx solid #eee;
+}
+.list-item > view {
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.right-nav {
+  position: fixed;
+  top: 200rpx;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 30rpx;
+  text-align: center;
+  font-size: 24rpx;
+  z-index: 3;
+}

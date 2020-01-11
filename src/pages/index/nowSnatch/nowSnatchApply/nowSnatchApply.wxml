@@ -1,0 +1,46 @@
+<!--pages/apply/apply.wxml-->
+<view class='apply'>
+  <view class='bgc'>
+    <view class='bgc-con'>
+      <view class='con-top'>
+        <view class='top-pic'></view>
+        <text class='top-txt'>申请</text>
+      </view>
+      <text class='con-bottom'>成为供应商</text>    
+    </view>
+  </view>
+  <view class='table'>
+    <view class='table-con'> 
+      <view class='con'>
+        <text class='con-left'>联系电话</text>
+        <input class='con-right' placeholder='请输入您的联系方式'></input>
+      </view>
+      <view class='con'>
+        <text class='con-left'>联系名称</text>
+        <input class='con-right' placeholder='请输入联系人名称'></input>
+      </view>
+      <view class='con'>
+        <text class='con-left'>供应商名称</text>
+        <input class='con-right' placeholder='请输入供应商名称'></input>
+      </view>
+      <view class='con'>
+        <text class='con-left'>供应数量</text>
+        <input class='con-right' placeholder='请输入件数'></input>
+      </view>
+      <view class='con'>
+        <text class='con-left'>供应商品报价</text>
+        <input class='con-right' placeholder='请输入价格'></input>
+      </view>
+      <view class='con'>
+        <text class='con-left'>供应地址</text>
+        <text class='con-right right-spe'>请选择省、市、区</text>
+        <view class='con-pic'></view>
+      </view>
+      <textarea class='con-spe' placeholder='详细地址（不超过20个字）'></textarea>
+        <view class='table-btn'>
+      <text class='btn-ui'>提交申请</text>
+      </view>
+    </view>
+  </view>
+  <view class='pic-else'></view>
+</view>

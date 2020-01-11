@@ -1,0 +1,145 @@
+<!--pages/zeroSnatchFriend/zeroSnatchFriend.wxml-->
+<view class='zeroSnatch'> 
+  <view class='bgc'></view>
+  <view class='rule'> 
+    <text class='rule-txt' >活动规则</text>
+    <view class='rule-pic'></view>
+  </view>
+  <view class='table'> 
+    <view class='table-con'>
+      <!-- 抢购商品 -->
+      <view class='con-detail'>
+        <view class='detail-pic'></view>
+        <view class='detail-con'>
+          <text class='con-txt'>COACH/蔻驰/ 男士经典织纹logo压花牛皮长款拉链钱包手风琴包74918</text>
+          <text class='con-num'>￥1970.00</text>
+          <view class='con-per'>
+            <text class='per-ui'>已有1346人参与</text>
+            <view class='per-pic'></view>
+          </view>
+        </view>
+      </view>
+      <!-- 抢购详情 -->
+      <view class='table-time'>
+        <view class='time-top'>
+           <text class='top-ui'>还差</text>
+           <text class='top-uis'>500元</text>
+           <text class='top-ui'>即可领取收纳包抢购...</text>
+        </view>
+        <view class='time-pic'></view>
+        <view class='time-bottom'>
+          <view class='bottom-left'>
+            <text class='txt-ui'>已有</text>
+            <text class='left-uis'>23</text>
+            <text class='txt-ui'>人助力砍价</text>
+          </view>
+          <view class='bottom-right'>
+            <text class='right-uis'>02</text>
+            <text class='txt-ui'>天</text>
+            <text class='right-uis'>02</text>
+            <text class='txt-ui'>小时</text>
+            <text class='right-uis'>12</text>
+            <text class='txt-ui'>分</text>
+            <text class='right-uis'>23</text>
+            <text class='txt-ui'>秒</text>
+          </view>
+        </view>
+      </view>
+      <!-- 邀请砍价 -->
+      <view class='table-btn'>
+        <view class='btn-style'>
+          <text class='btn-ui'>砍价领券</text>
+        </view>
+        <view class='btn-style'>
+          <text class='btn-ui'>我也要0元抢</text>
+        </view>
+      </view>
+      <!-- 金额说明 -->
+      <view class='table-explain'>
+        <text class='explain-ui'>砍价金额说明</text>
+         <view class='explain-pic'></view>
+      </view>
+      <!-- 砍价记录 -->
+      <view class='table-record'>     
+        <view class='record-title'>
+          <view class='record-box'></view>
+          <view class='record-ui'>好友砍价记录</view>
+          <view class='record-box'></view>
+        </view>
+        <view class='record-con'>
+          <view class='left'>
+            <view class='head'></view>
+            <view class='name'>CY</view>
+            <view class='rate'></view>          
+          </view>
+          <view class='right'>
+            <view class='pic'></view>
+            <view class='money'>砍掉12.0元</view>
+          </view>
+        </view>
+
+        <view class='record-con'>
+          <view class='left'>
+            <view class='head'></view>
+            <view class='name'>CY</view>
+            <view class='rate'></view>          
+          </view>
+          <view class='right'>
+            <view class='pic'></view>
+            <view class='money'>砍掉12.0元</view>
+          </view>
+        </view>
+
+        <view class='record-con'>
+          <view class='left'>
+            <view class='head'></view>
+            <view class='name'>CY</view>
+            <view class='rate'></view>          
+          </view>
+          <view class='right'>
+            <view class='pic'></view>
+            <view class='money'>砍掉12.0元</view>
+          </view>
+        </view>
+
+        <view class='record-all'>
+          <text class='all-ui'>·只显示最近10个好友砍价记录·</text>  
+        </view>
+      </view>
+    </view>
+    <view class='rate-pic'></view>
+  </view>
+</view>
+
+<!-- 弹窗 -->
+<view class='drawer-screen' style='display:none'></view>
+<!-- 活动结束成功 -->
+<view class="drawer-box" style='display:none'> 
+  <view class='drawer-top'>
+    <view class="drawer-title">活动已结束</view> 
+    <view class="drawer-close"></view>
+  </view>
+  <view class="drawer-content content-else"> 
+    <view class='end-pic'></view>
+    <view class='end-tip'>好友已砍价成功！</view>
+    <view class='end-btns'>
+      <view class='btns-ui'>去逛逛</view>
+      <view class='btns-pic'></view>
+    </view>
+  </view> 
+</view>
+<!-- 活动结束失败 -->
+<view class="drawer-box" style='display:none'> 
+  <view class='drawer-top'>
+    <view class="drawer-title">活动已结束</view> 
+    <view class="drawer-close"></view>
+  </view>
+  <view class="drawer-content content-else"> 
+    <view class='end-pic'></view>
+    <view class='end-tip'>好友砍价失败...</view>
+    <view class='end-btns'>
+      <view class='btns-ui'>去逛逛</view>
+      <view class='btns-pic'></view>
+    </view>
+  </view> 
+</view>

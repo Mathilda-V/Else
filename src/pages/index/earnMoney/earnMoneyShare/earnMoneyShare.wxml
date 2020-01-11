@@ -1,0 +1,33 @@
+<view class="share">
+  <view class='head'>
+    <image class='img-pit' src="{{task_info.cover}}"></image>
+    <image class='logo' src="{{task_info.logo}}"></image>
+  </view>
+  <view class='container'>
+    <text class='title'>{{task_info.name}}</text>
+    <view class='con'>
+      <view class='con-l'>
+        <view class='con-l-head'>
+          <image class='img-quan'></image>
+          <text class='con-l-price'>{{price}}</text>
+          <view class='con-l-syn'>
+            <text class='rmb'>RMB</text>
+            <text class='postage'>包邮秒杀</text>
+          </view>
+        </view>
+        <view class='con-l-dsc'>
+          <text class='share-dsc'>{{task_info.content}}</text>
+        </view>
+      </view>
+      <view class='con-r'>
+        <image class='share-qr' src="{{task_info.codeUrl}}"></image>
+        <view class='anjian'>
+          <image class='img-an'></image>
+          <text class='an-text'>长按</text>
+        </view>
+        <text class='qr-text'>识别二维码</text>
+        <text class='btn'>领券下单</text>
+      </view>
+    </view>
+  </view>
+</view>

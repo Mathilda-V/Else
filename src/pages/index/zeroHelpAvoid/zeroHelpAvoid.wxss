@@ -1,0 +1,117 @@
+/* pages/zeroHelpAvoid/zeroHelpAvoid.wxss */
+.head{
+  height: 260rpx;
+  width: 750rpx;
+  background: #ce00ff;
+  border-radius: 0 0 35rpx 35rpx;
+  position: relative;
+}
+.rule {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 40rpx;
+  right: 0;
+  width: 140rpx;
+  height: 46rpx;
+  padding-left: 20rpx;
+  border-radius: 40rpx 0 0 40rpx;
+  background: linear-gradient(to bottom, #ffe92b 0%,#fbc005 100%);
+}
+.rule-txt {
+  font-size: 24rpx;
+  color: #333;
+}
+.img-jt {
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.container{
+  background: #fff;
+  border-radius: 20rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  position: relative;
+  top: -45rpx;
+}
+.goods{
+  width: 650rpx;
+  padding: 26rpx 20rpx;
+  border-bottom: 1px dashed #eee;
+  display: flex;
+}
+.goods:last-child{
+  border-bottom: 0;
+}
+.goodspit{
+  border:1rpx solid #eee;
+  width: 214rpx;
+  height: 214rpx;
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+.goods-det{
+  display: flex;
+  flex-direction: column;
+}
+.goods-title{
+  font-size: 24rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods-fun{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15rpx;
+  margin-bottom: 25rpx;
+}
+.goodsPrice{
+  color: #ff471e;
+  font-size: 30rpx;
+}
+.goods-fnu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.participation{
+  color: #898989;
+  font-size: 22rpx;
+}
+.participate,.zeroSnatch{
+  display: flex;
+  align-items: center;
+}
+.img-sz{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.participateTime{
+  color:#959595;
+  font-size: 24rpx;
+}
+.zeroSnatch{
+  width: 134rpx;
+  height: 50rpx;
+  background: #993bdd;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+.zeroText{
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+.active{
+  background: #ff471e;
+}
+.end{
+  background: #959595;
+}

@@ -1,0 +1,132 @@
+<!--pages/delicious/delicious.wxml-->
+<view class='food'>
+<!-- 搜索栏 -->
+  <view class='head'>
+    <view class='back'></view> 
+    <view class='search'>
+      <view class='search-img'></view>      
+      <!-- <image class='search-img' src="/static/img/"></image> -->
+      <input class='search-txt' placeholder='商家、品类、商圈'></input>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="lunbo" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>  
+  </swiper>
+  <!-- 小图标 -->
+  <view class='icon'>
+    <view class='icon-con' wx:for="{{icon}}" wx:key="">
+      <view class='icon-pic'></view>
+      <text class='icon-txt'>{{item.txt}}</text>  
+    </view>
+  </view>  
+  <view class="classified">
+    <view class="menu-container {{scroll ? '' : 'scrollTop'}}">
+      <view class="menu">
+        <view class="menu-item {{shownavindex == 4? 'active' : ''}}" bindtap="nearby" data-nav="4">
+          <view class="content">附近</view>
+          <view class="menu-icon"></view>
+        </view>
+        <view class="menu-item {{shownavindex == 1? 'active' : ''}}" bindtap="food" data-nav="1">
+          <view class="content">美食</view>
+          <view class="menu-icon"></view>
+        </view>
+        <view class="menu-item {{shownavindex == 2? 'active' : ''}}" bindtap="sort" data-nav="2">
+          <view class="content">智能排序</view>
+          <view class="menu-icon"></view>
+        </view>
+        <view class="menu-item {{shownavindex == 3? 'active' : ''}}" bindtap="filter" data-nav="3">
+          <view class="content">筛选</view>
+          <view class="menu-icon"></view>
+        </view>
+      </view>
+      <view class="nearby {{nearbyopen ? 'slidown' : 'slidup'}} {{nearbyshow ? 'disappear':''}}">
+        <view class="nearby-item nearby-left">
+          <view wx:for="{{nearbyleft}}" bindtap="selectleft" data-city="{{index}}" wx:key="">
+            {{index}}
+          </view>
+        </view>
+        <view class="nearby-item nearby-right">
+          <view wx:for="{{nearbyright}}" wx:key="">
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <view class="food2 {{foodopen ? 'slidown' : 'slidup'}} {{foodshow ? 'disappear':''}}">
+        <view class="food2-item">
+        <view wx:for="{{foodType}}"  wx:key="">
+          {{item}}
+        </view>
+        </view>
+      </view>
+      <view class="temp temp1 {{sortopen ? 'slidown' : 'slidup'}} {{sortshow ? 'disappear':''}}">
+        <view wx:for="{{content}}" wx:key="">
+          {{item}}
+        </view>
+      </view>
+      <view class="temp temp2 {{filteropen ? 'slidown' : 'slidup'}} {{filtershow ? 'disappear':''}}">
+        <form>
+          <view class="form-content" wx:for="{{filter}}" wx:key="">
+            <view class="form-content-title">{{item[0].title}}</view>
+            <view class="select">
+              <checkbox-group name="checkbox">
+                <label id="{{item.code}}" class="{{item.checked ? 'unchecked' : 'checked'}}" bindtap="checked"  wx:for="{{item}}" wx:key=""><checkbox hidden value="{{item.value}}"/>{{item.value}}</label>
+              </checkbox-group>
+            </view>
+          </view>
+          <view class="btn-area">
+            <button class="btn-reset" formType="submit">重置</button>
+            <button class="btn-confirm" formType="reset">确定</button>
+          </view>
+        </form>
+      </view>
+      <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+    </view>
+    <view class='shop'>
+        <view class='shop-con'>
+          <view class='con-pic'></view>
+          <view class='con-txt'>
+            <view class='txt-top'>
+              <text class='top-ui'>肯德基（创意天地店）</text>
+              <view class='top-pic'></view>
+            </view>
+            <view class='txt-middle'>
+              <view class='middle-pic'></view>
+              <text class='middle-ui'>￥28/人</text>
+            </view>
+            <view class='txt-bottom'>
+              <text class='bottom-txt'>快餐简餐 洪山区</text>
+              <text class='bottom-distance'> 小于500m</text>                
+            </view>
+          </view>
+          <view class='shop-coupon'>
+            <view class='coupon-pic'></view>
+            <text class='coupon-txt'>19代20元， 47.5代50元</text>
+          </view>
+        </view>
+
+        <view class='shop-con'>
+          <view class='con-pic'></view>
+          <view class='con-txt'>
+            <view class='txt-top'>
+              <text class='top-ui'>肯德基（创意天地店）</text>
+              <view class='top-pic'></view>
+            </view>
+            <view class='txt-middle'>
+              <view class='middle-pic'></view>
+              <text class='middle-ui'>￥28/人</text>
+            </view>
+            <view class='txt-bottom'>
+              <text class='bottom-txt'>快餐简餐 洪山区</text>
+              <text class='bottom-distance'> 小于500m</text>                
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

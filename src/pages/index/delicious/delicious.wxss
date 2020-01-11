@@ -1,0 +1,361 @@
+/* pages/food/food.wxss */
+.food {
+  width: 750rpx;
+  background-color: #f5f5f5;
+}
+/* 搜索栏 */
+.head {
+  display: flex;
+  width: 750rpx;
+  padding: 12rpx 0;
+  background-color: #ff451f;
+}
+.back {
+  width: 88rpx;
+  height: 88rpx;
+  margin-right: 20rpx;
+  background-color: #ccc;  
+}
+.search {
+  display: flex;
+  align-items: center;
+  width: 540rpx;
+  padding: 20rpx;
+  border-radius: 50rpx;
+  background-color: #fff;
+}
+.search-img {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #ccc;
+}
+.search-txt {
+  width: 460rpx;
+  padding-left: 20rpx; 
+  font-size: 26rpx;
+}
+/* 轮播图 */
+.slide-image {
+  width: 750rpx;
+  height: 324rpx;
+}
+/* 小图标 */
+.icon {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  padding: 15rpx 1rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.icon-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 187rpx;
+  height: 190rpx; 
+}
+.icon-pic {
+  display: inline-block;
+  width: 128rpx;
+  height: 128rpx; 
+  background-color: #ccc;
+}
+.icon-txt {
+  font-size: 24rpx;
+}
+/* 分类搜索 */
+.classified {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+}
+.topic {
+  display: flex;
+  width: 710rpx;
+  padding: 0 20rpx;
+  margin-bottom: 2rpx;
+  background-color: #fff;
+}
+.genre {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.genre-txt {
+  margin-right: 10rpx;
+  line-height: 85rpx;
+  font-size: 28rpx;
+}
+.genre-btn {
+  width: 20rpx;
+  height: 10rpx;
+  background-color: #ccc;
+}
+.shop{
+  width: 750rpx;
+}
+.shop-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 730rpx;
+  padding: 30rpx 20rpx;
+  padding-right: 0;
+  margin-bottom: 2rpx;
+  background-color: #fff;  
+}
+.con-pic {
+  width: 168rpx;
+  height: 168rpx;
+  background-color: #ccc;
+}
+.con-txt {
+  width: 520rpx;
+  padding: 0 20rpx 10rpx 0;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.txt-top {
+  display: flex;
+  align-items: center;
+}
+.top-ui {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.top-pic {
+  display: inline-block;
+  width: 33rpx;
+  height: 33rpx;
+  background-color: #ccc;
+}
+.txt-middle {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.middle-pic {
+  width: 143rpx;
+  height: 26rpx;
+  background-color: #ccc;
+}
+.middle-ui {
+  font-size: 24rpx;
+  color: #646464;
+}
+.txt-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.bottom-txt {
+  font-size: 26rpx;
+  color: #646464;
+}
+.bottom-distance {
+  font-size: 26rpx;
+  color: #646464;  
+}
+.shop-coupon {
+  display: flex;
+  align-items: center;
+  width: 520rpx;
+  margin-left: 190rpx;
+}
+.coupon-pic {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #ccc;
+}
+.coupon-txt {
+  padding: 10rpx;
+  font-size: 26rpx;
+  color: #646464;  
+}
+
+/* --下拉菜单样式-- */
+.menu-container{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+.menu{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    width: 750rpx;
+    background: #fff;
+}
+.menu-item{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    height: 40px;
+    align-items:center;
+    justify-content:center;
+    font-size: 14px;
+}
+.content{
+    display: inline-block;
+}
+.menu-icon{
+    display: inline-block;
+    border: 4px solid transparent;
+    border-top: 4px solid #9b9b9b;
+    margin-left: 5px;
+}
+.temp{
+    position: absolute;
+    z-index: -1;
+}
+.temp1{
+    display: none;
+    width: 100%;
+    max-height: 550rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 50rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+.temp2{
+    display: none;
+    width: 100%;
+    max-height: 790rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+.temp view{
+    font-size: 14px;
+    color: #666;
+}
+.food2, .nearby{
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: -1;
+}
+.food2 {
+  height: 888rpx;
+}
+.nearby {
+  height: 990rpx;
+}
+.food2 .food2-item, .nearby .nearby-item{
+    padding-left: 40rpx;
+    overflow-y: scroll;
+    float: left;
+    line-height: 80rpx;
+    box-sizing: border-box; 
+    background: #fff;
+    font-size: 14px;
+    color: #717273;
+}
+.nearby .nearby-item {
+  width: 50%;
+  height: 990rpx;
+}
+.food2 .food2-item {
+    width: 100%;
+    height: 888rpx;
+}
+.food2-item view, .nearby-item view{
+    height: 88rpx;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space:nowrap;  
+    padding-left: 15rpx; 
+}
+.current{
+    background: #e0e0e0;
+}
+.current2{
+    background: #fff;
+}
+.fullbg{
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 1, 1);
+    transition: all .3s;
+    opacity: 0;
+}
+.fullopacity{
+    opacity: .3;
+}
+.menu-item.active .content{
+    color: #61beff;
+}
+.menu-item.active .menu-icon{
+    border-bottom: 4px solid #61beff;
+    border-top:0;
+}
+.slidown{
+    display: block;
+    z-index: 5;
+}
+.slidup{
+    display: block;
+    z-index: -1;
+}
+.disappear{
+    display: none;
+}
+.form-content-title {
+  padding-left: 40rpx;
+  width: 710rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  box-sizing: border-box;
+}
+.select {
+  display: flex;
+}
+.select label {
+  display: inline-block;
+  margin: 15rpx 0 15rpx 20rpx;
+  width: 158rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.select label.unchecked {
+  color: #999;
+}
+.select label.checked {
+  background: #ff471e;
+  color: #fff;
+}
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+}
+.btn-area button {
+  width: 336rpx;
+  height: 80rpx;
+  border: none;
+  font-size: 30rpx;
+}
+.btn-reset {
+  background: #f5f5f5;
+  color: #999;
+}
+.btn-confirm {
+  background: #ff471e;
+  color: #fff;
+}
+.scrollTop {
+  position: fixed;
+  top: 0rpx;
+  z-index: 5;
+}

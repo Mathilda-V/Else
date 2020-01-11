@@ -1,0 +1,223 @@
+<view class="detail">
+  <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{4000}}" duration="{{500}}" class="swiper">
+    <block wx:for="{{productDetail.product.images}}" wx:key="item">
+      <swiper-item>
+        <image class="swiper-image" src="{{item.url}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="price-con row" wx:if="{{productDetail.product.panic}}">
+    <view class="price-left between {{productDetail.product.panicStatus != '3' ? 'wait' : ''}}">
+      <view class="price-money row">
+        <text class="big-white">{{productDetail.product.jiechao}}</text>
+        <text class="middle-white"> 节钞</text>
+      </view>
+      <view class="price-old column">
+        <text class="price-sell small-white">售价: ￥{{productDetail.product.discountPrice}}</text>
+        <text class="price-through small-light">原价: ￥{{productDetail.product.price}}</text>
+      </view>
+    </view>
+    <view class="remainder row">
+      <image class="thunder" src="{{productDetail.product.panicStatus != '3'?'/static/img/panicStatus2@3x.png':'/static/img/panicStatus3@3x.png'}}"/>
+      <view class="column-center remainder-center">
+        <text class="small-black">{{productDetail.product.panicStatus != '3' ? '距离开抢仅剩' : '距抢购结束仅剩'}}</text>
+        <text class="left-date {{productDetail.product.panicStatus != '3' ? 'wait' : ''}}">{{remainTime}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="title-con item-white-thin bottom-space">
+    <image wx:if="{{productDetail.product.userLevel.level==0?fasle:true}}" src="{{productDetail.product.userLevel.levelLogo}}" class="level" />
+    <text class="middle-black left-space title">{{productDetail.product.title}}</text>
+    <view class="between">
+      <text>
+        <block wx:if="{{!productDetail.product.panic}}">
+          <text class="priceSell small-white">售价: ￥{{productDetail.product.discountPrice}}</text>
+          <text class="priceThrough small-light">原价: ￥{{productDetail.product.price}}</text>
+        </block>
+      </text>
+      <text class="small-gray">已兑换: {{productDetail.product.sellNum}}人</text>
+    </view>
+  </view>
+
+  <view class="bottom-space">
+    <view class="item-white-thin between" bindtap="showSelect" wx:if="{{productDetail.product.attr_list.length}}">
+      <text class="normal-black">规格数量选择</text>
+      <image class="arrow" src="/static/img/icon21@3x.png" />
+    </view>
+    <view class="item-white-thin between">
+      <text class="normal-black">我要供应</text>
+      <image class="arrow" src="/static/img/icon21@3x.png" />
+    </view>
+    <view class="item-white-thin between" bindtap="showCoupon" data-shopId="{{productDetail.product.shop_id}}">
+      <text class="normal-black">领券:</text>
+      <view class="row">
+        <block wx:for="{{productDetail.product.money_ticketSend_list}}" wx:key="index">
+          <text class="small-orange" wx:if="{{item.useCondition == 3}}">满99减{{item.money}}</text>
+          <text class="small-orange left-space" wx:if="{{item.useCondition == 100}}">满100减{{item.money}}</text>
+        </block>
+      </view>
+      <image class="arrow" src="/static/img/icon21@3x.png" />
+    </view>
+    <view class="item-white-thin row">
+      <text class="normal-black">服务:</text>
+      <view class="left-space" wx:for="{{productDetail.product_right_interest_list}}" wx:key="index">
+        <text class="small-orange">· </text>
+        <text class="small-gray">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="comment-space bottom-space" >
+    <view class="item-white-thin between">
+      <view class="row">
+        <text class="middle-black">用户评价</text>
+        <text class="normal-gray"> ({{productDetail.product.commentNum}}) </text>
+      </view>
+      <view class="row">
+        <!-- <text class="small-gray">94.4%好评</text> -->
+        <image class="arrow left-space" src="/static/img/icon21@3x.png"/>
+      </view>
+    </view>
+    <view class="item-white-thin row common-tag bottom-line">
+      <text 
+        class="assess-item small-gray" 
+        wx:for="{{productDetail.common_tag_list}}" 
+        wx:key="index">{{item.tag}}({{item.commonNum}})</text>
+    </view>
+    <!-- <view class="item-white-thin column avatar-con">
+      <view class="row">
+        <image class="avatar" />
+        <text class="normal-black left-space">柠檬苏打绿</text>
+        <image class="level arrow left-space" />
+      </view>
+      <view class="row">
+        <text class="small-gray">2018.06.03</text>
+        <text class="small-gray left-space">19:23</text>
+        <text class="small-gray left-space">樱花粉</text>
+      </view>
+      <text class="normal-black line-2">发生的海口路附近受到了房间里见风使舵的沙发斯蒂芬发生大范德萨范德萨</text>
+      <image style="width: 100rpx;height: 100rpx;background-color: #dddddd;"/>
+    </view> -->
+  </view>
+
+  <view class="item-white-thin between shop-sta">
+    <view class="logo-con row">
+      <image class="shop-logo" src="{{productDetail.product.shop.logo}}"/>
+      <view class="left-space">
+        <text class="small-black block">{{productDetail.product.shop.name}}</text>
+        <text class="mini-gray">{{productDetail.product.shop.shop_interest_number}}粉丝关注</text>
+      </view>
+    </view>
+    <view class="btn-con row">
+      <text class="shop-btn small-orange" bindtap='tobindshop'>全部宝贝</text>
+      <text class="shop-btn small-orange orange-back left-space" bindtap='tobindshop'>进店逛逛</text>
+    </view>
+  </view>
+  <view class="">
+   <view class='tabHead'>
+    <text class='tabText {{tabIndex == index? "active":""}}' data-index="{{index}}" wx:for="{{tabList}}" wx:key="" bindtap='bindTab'>{{item}}</text>
+   </view>
+   <view class='tabTw' wx:if="{{tabIndex==0?true:false}}">
+    <image class='img-tw' src="{{productDetail.product.detail}}"></image>
+    <!-- <web-view class="webView" src="{{productDetail.product.detail}}"></web-view> -->
+   </view>
+   <view class='tabCs' wx:if="{{tabIndex==1?true:false}}">
+    <view class='CsTr' wx:for="{{productDetail.product.param_list}}" wx:key="">
+      <text class='CsTa'>{{item.name}}</text>
+      <text class='CsTb'>{{item.value}}</text>
+    </view>
+   </view>
+   <view class='tabSh' wx:if="{{tabIndex==2?true:false}}">
+    <view class='kuang' wx:for="{{RecommendProducts}}" wx:key="">
+      <image class='img-tj' src="{{item.thumbnail}}"></image>
+      <text class='ti-title'>{{item.title}}</text>
+      <text class='tj-fun'>
+        <text class='tj-price'>￥{{item.sellAmount}}</text>
+        <text class='tj-payment'>{{item.sellNum}}人付款</text>
+      </text>
+    </view>
+   </view>
+  </view>
+
+  <view class=' {{popoutHidden? " " : "popout"}}' bindtap='closePopout' catchtouchmove="ture">
+    <view class="type-select {{selectHidden ? '' : 'type-trans'}}"  catchtap='aa'>
+      <view class="item-white-thin row" style="position:relative">
+        <image class="img-small" src="{{productDetail.product.images[0].url}}"></image>
+        <view class="column left-space select-result">
+          <text class="normal-red">价格: ￥{{productDetail.product.discountPrice}}</text>
+          <text class="normal-gray">已选择: 粉色</text>
+        </view>
+        <image class="close select-close" src="/static/img/icon29@3x.png" bindtap="closeSelect"/>
+      </view>
+      <view class="item-white-thin" wx:for="{{productDetail.product.attr_list}}" wx:key="index">
+        <text class="middle-black">{{item.attrName}}</text>
+        <view class="row top-space selector-con">
+          <text 
+            wx:for="{{item.attr_value_list}}" 
+            wx:for-item="attr"
+            wx:for-index="i"
+            wx:key="attr"
+            data-parentindex="{{index}}"
+            data-index="{{i}}"
+            bindtap="selectorClicked"
+            class="normal-gray selector {{i == attrSelect[index].currentIndex ? 'selected' : ''}}" 
+          >{{attr.valueName}}</text>
+        </view>
+      </view>
+      <view class="item-white-thin">
+        <text class="middle-black">数量</text>
+        <view class="stepper row top-space">
+          <text class="add-minus small-gray" bindtap='numberReduce'>-</text>
+          <text class="times small-black">{{number}}</text>
+          <text class="add-minus small-gray" bindtap='numberAdd'>+</text>
+        </view>
+      </view>
+      <view class='footer row'>
+        <text class='operate-btn normal-white add-cart' bindtap='postCart'>加入购物车</text>
+        <text class='operate-btn normal-white tobuy' bindtap='confirmOrder'>立即购买</text>
+      </view>
+    </view>
+
+    <view class="coupon {{couponHidden ? '' : 'coupon-trans'}}"  catchtap='aa'>
+      <view class="item-white between coupon-title">
+        <text></text>
+        <text class="middle-black title-text">领取优惠券</text>
+        <image class="close" src="/static/img/icon29@3x.png" bindtap="closeCoupon"/>
+      </view>
+      <view class="column coupon-con">
+        <view class="coupon-item row" wx:for="{{productDetail.product.money_ticketSend_list}}" wx:key="index">
+          <view class="coupon-left">
+            <text class="middle-white">￥</text>
+            <text class="coupon-num">{{item.money}}</text>
+          </view>
+          <view class="column coupon-block coupon-middle">
+            <view>
+              <text class="normal-black block" wx:if="{{item.useCondition == 3}}">订单满99元使用</text>
+              <text class="normal-black block" wx:elif="{{item.useCondition == 100}}">订单满100元使用</text>
+              <text class="normal-black block">(不含邮费)</text>
+            </view>
+            <text class="small-gray">~{{item.effectTime}}</text>
+          </view>
+          <view class="column coupon-block coupon-right">
+            <text class="small-orange">店铺优惠券</text>
+            <text class="small-white coupon-get">立即领取</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="operate row">
+    <view class="operate-item" bindtap='tobindshop'>
+      <image class="img-bottom" src="/static/img/icon32@3x.png"/>
+      <text class="small-gray">店铺</text>
+    </view>
+    <view class="operate-item" bindtap='Collected'>
+      <image class="img-bottom" src="{{productDetail.product.isCollected == 0?'/static/img/start_03.png':'/static/img/start_05.png'}}"/>
+      <text class="small-gray">{{collect}}</text>
+    </view>
+    <text class="operate-btn normal-white add-cart {{productDetail.product.panicStatus == '2' ? 'grey' : ''}}" bindtap="{{productDetail.product.panicStatus == '2' ? '' : 'showSelect'}}">加入购物车</text>
+    <text class="operate-btn normal-white tobuy {{productDetail.product.panicStatus == '2' ? 'wait' : ''}}" bindtap="{{productDetail.product.panicStatus == '2' ? 'PanicBuyTip' : 'showSelect'}}">{{productDetail.product.panicStatus == '2' ? (productDetail.product.setTip? '已设置提醒':'设置提醒'): '立即购买'}}</text>
+  </view>
+</view>
+<loading wx:if="{{loadingHidden}}">加载中...</loading>

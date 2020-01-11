@@ -1,0 +1,268 @@
+/* pages/hotel/hotel.wxss */
+.hotel {
+  width: 750rpx;
+  margin-bottom: 150rpx;
+}
+/* 酒店背景 */
+swiper {
+  height: 290rpx;
+}
+.slide {
+  width: 750rpx;
+  height: 290rpx;
+}
+/* 房间类型 */
+.room {
+  position: relative;
+  top: -10rpx;
+  left: 20rpx;
+  width: 710rpx;
+  padding-bottom: 40rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.room-change {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.cla {
+  flex: 1;
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  color: #929292;
+}
+.cla1{
+  border-radius: 20rpx 0 0 0;
+  
+}
+.cla2 {
+  border-radius: 0 20rpx 0 0;  
+}
+.cla-spe {
+  color: #fff;
+  background-color: #ff5a23;  
+}
+/* 房间位置 */
+.room-ui {
+  width: 610rpx;
+  margin: 20rpx;
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+}
+.site-left {
+  font-size: 36rpx;
+}
+.site-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-pic {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #ccc;
+}
+.site-near {
+  font-size: 22rpx;
+  color: #929292;
+  margin-left: 10rpx;
+}
+/* 入住时间 */
+.room-time {
+  justify-content: flex-start;
+}
+.time-day {
+  flex: 2;
+}
+.time-top {
+  font-size: 24rpx;
+  color: #929292;
+}
+.time-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 15rpx;  
+}
+.time-date {
+  font-size: 32rpx;
+  margin-right: 15rpx;
+}
+.time-week {
+  font-size: 26rpx;
+}
+.time-all {
+  flex: 1;
+  text-align: right;
+  font-size: 26rpx;
+  padding-top: 40rpx;
+}
+/* 搜索栏 */
+.room-search {
+  justify-content: flex-start;  
+  background-color: #f5f5f5;
+}
+.search-img {
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #ccc;
+}
+.search-txt {
+  width: 460rpx;
+  padding-left: 20rpx; 
+  font-size: 26rpx;
+}
+/* 搜索按钮 */
+.room-btn {
+  width: 525rpx;
+  padding: 20rpx 0;
+  margin: 20rpx 73rpx 0 73rpx;
+  border-radius: 50rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #fff;
+  background-color: #ff5a23;
+}
+/* 酒店类型 */
+.icon {
+  display: flex;
+  justify-content: space-around;
+  width: 750rpx;
+  padding: 15rpx 1rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.icon-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150rpx;
+}
+.icon-pic {
+  display: inline-block;
+  width: 95rpx;
+  height: 95rpx; 
+  background-color: #ccc;
+}
+.icon-txt {
+  font-size: 24rpx;
+  color: #929292;
+  margin-top: 10rpx;
+}
+/* 分类搜索 */
+.topic {
+  display: flex;
+  width: 710rpx;
+  padding: 0 20rpx;
+  margin-bottom: 2rpx;
+  background-color: #fff;
+}
+.genre {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.genre-txt {
+  margin-right: 10rpx;
+  line-height: 85rpx;
+  font-size: 28rpx;
+  color: #929292;
+}
+.genre-btn {
+  width: 20rpx;
+  height: 10rpx;
+  background-color: #ccc;
+}
+/* 酒店详情 */
+.details {
+  width: 710rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+}
+.con-top {
+  display: flex;
+  padding: 0 20rpx 30rpx 20rpx;
+}
+.con-pic {
+  width: 180rpx;
+  height: 220rpx;
+  background-color: #ccc;
+}
+.con-txt {
+  width: 520rpx;
+  padding: 0 20rpx 10rpx 20rpx;
+  background-color: #fff;
+}
+.txt-top {
+  padding-right: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-ui {
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.top-pic {
+  display: inline-block;
+  width: 33rpx;
+  height: 33rpx;
+  background-color: #ccc;
+}
+.txt-middle {
+  display: flex;
+  align-items: center;
+  padding: 5rpx 0;
+}
+.middle-pic {
+  width: 143rpx;
+  height: 26rpx;
+  background-color: #ccc;
+  margin-right: 30rpx;
+}
+.middle-ui {
+  font-size: 24rpx;
+  color: #646464;
+}
+.txt-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-txt {
+  font-size: 30rpx;
+  color: #ff5A23;
+}
+.txt-spe {
+  font-size: 18rpx;
+}
+.bottom-num {
+  font-size: 26rpx;
+  color: #ff0000;
+}
+.txt-else {
+  padding: 5rpx;
+  border: 2rpx solid #3c73ff;
+  border-radius: 10rpx;
+  font-size: 20rpx;
+  color: #3c73ff;
+}
+/* 底部 */
+.bottom {
+   position: fixed;
+   bottom: 0;
+   margin-bottom: 0;
+} 
+.icon-pics {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx; 
+  background-color: #ccc;
+}

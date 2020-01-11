@@ -1,0 +1,104 @@
+<!--pages/index/more/more.wxml-->
+<view style='width: 750rpx;height: 612rpx;background-color: #fff;position:fixed;top:0;z-index: 50;'>
+  <!-- 搜索栏 -->
+  <view class='top'>
+    <view class='site'>
+      <image class='site-img' src="/static/img/icon31@3x.png"></image>
+      <text class='site-txt' bindtap="toCity">{{addressCity}}</text>
+    </view> 
+    <view class='search' bindtap="toSearch">
+      <image class='search-img' src="/static/img/search@3x.png"></image>
+      <input class='search-txt' placeholder='商家、品类、商圈' disabled></input>
+    </view>
+  </view>
+  <!-- 菜单按钮 -->
+  <view class='menus'>
+    <view class="menus-con" bindtap="toRushBuy" wx:for="{{menus}}" wx:key="" data-info="{{item}}">
+      <image class='con-img' src="{{item.pic}}"></image>
+      <text class='con-name'>{{item.txt}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 商家列表 -->
+<view class="container">
+  <view class="fix-top {{scroll ? 'scrollTop' : ''}}">
+    <view class="menu-container">
+      <view class="menu">
+        <view class="menu-item {{shownavindex == 4? 'active' : ''}}" bindtap="total" data-nav="4">
+          <view class="content fontSmallGray">{{totalName}}</view>
+          <view class="menu-icon"></view>
+        </view>
+        <view class="menu-item {{shownavindex == 1? 'active' : ''}}" bindtap="nearby" data-nav="1">
+          <view class="content fontSmallGray">{{nearbyName}}</view>
+          <view class="menu-icon"></view>
+        </view>
+        <view class="menu-item {{shownavindex == 2? 'active' : ''}}" bindtap="sort" data-nav="2">
+          <view class="content fontSmallGray">{{sortName}}</view>
+          <view class="menu-icon"></view>
+        </view>
+      </view>
+      <!-- 全部 -->
+      <view class="total {{totalopen ? 'slidown' : 'slidup'}} {{totalshow ? '':'disappear'}}">
+        <view class="total-item">
+          <view bindtap="all">全部</view>
+          <view wx:for="{{total}}" wx:key="" bindtap="one" data-info="{{item}}">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+      <!-- 附近 -->
+      <view class="nearby {{nearbyopen ? 'slidown' : 'slidup'}} {{nearbyshow ? '':'disappear'}}">
+        <view class="nearby-item">
+          <view bindtap="near">附近</view>
+          <view wx:for="{{nearBy}}" wx:key="" bindtap="two" data-info="{{item}}">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+      <!-- 智能排序 -->
+      <view class="temp {{sortopen ? 'slidown' : 'slidup'}} {{sortshow ? '':'disappear'}}">
+        <view class="temp-item">
+          <view wx:for="{{content}}" wx:key="" bindtap="three" data-info="{{item}}">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+      <!-- 遮罩层 -->
+      <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="list-main">
+      <view class="shop" wx:for="{{shopList}}" wx:key="" bindtap="goDetail" data-info="{{item}}">
+        <image class="shop-picture" src="{{item.logo == '0'? '/static/img/default@3x.jpg': item.logo}}"></image>
+        <view class="shop-base-info flex-column">
+          <view class="shop-name-wrapper flex">
+            <text class="shop-name h2">{{item.name}}</text>
+            <!-- <view class="shop-name-icon"></view> -->
+          </view>
+
+          <view class="flex con-mid">
+            <view class='start flex gray'>
+              <view class='abOrange' style="width:{{item.comment_score*28}}rpx"></view>
+              <image class='shop-score' src='/static/img/start@3x.png'></image>
+            </view>
+            <text class="shop-type fontSmallGray">{{item.cat_name}}</text>
+            <text class="shop-district fontSmallGray">{{item.addressIndex}}</text>
+          </view>
+
+          <view class="flex space-between con-bottom">
+            <text class="per-capita fontNormalRed">￥{{item.perCost}}/人</text>
+            <text class="shop-distance fontSmallGray">{{item.distance}}</text>
+          </view>
+
+          <view class='quan flex' wx:if='{{item.activity[0] != null}}'>
+            <image class='quan-pic' src='/static/img/quan@3x.png'></image>
+            <text class='fontSmallGray'>{{item.activity[0].title}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<loading wx:if="{{loadingHidden}}">加载中...</loading>

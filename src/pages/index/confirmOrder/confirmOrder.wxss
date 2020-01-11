@@ -1,0 +1,251 @@
+/* pages/confirm-order/confirm-order.wxss */
+.confirm-order{
+  background-color: #f5f5f5;
+  /* padding-bottom: 150rpx; */
+}
+.img-ad{
+  width: 750rpx;
+  height: 10rpx;
+}
+.kuang{
+  height: 40rpx;
+}
+.ress{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+.address{
+  background-color: #fff;
+  width: 710rpx;
+  padding: 28rpx 20rpx 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img-dz{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.img-jt{
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.address-l{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user-text{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 40rpx;
+}
+.add{
+  display: flex;
+  flex-direction: row;
+}
+.add-text{
+  display: block;
+  width: 190rpx;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 40rpx; 
+}
+.add-txt{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 40rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.addrText{
+  font-size: 26rpx;
+  color: #ff6517;
+  line-height: 40rpx;
+}
+.sh-type{
+  width: 710rpx;
+  padding: 26rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.img-sh{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.sh-text{
+  font-size: 26rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+.sh-btn{
+  display: block;
+  width: 143rpx;
+  height: 49rpx;
+  border: 1rpx solid #eee;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 49rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.active{
+  border: 1rpx solid #ff3c1e;
+  color: #ff3c1e;
+}
+.shop{
+  width: 730rpx;
+  height: 90rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+}
+.img-shop{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx; 
+}
+.shop-text{
+  font-size: 26rpx;
+  color: #333;
+}
+.goods{
+  width: 710rpx;
+  padding: 15rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.img-goods{
+  width: 190rpx;
+  height: 190rpx;
+  margin-right: 30rpx;
+  background-color: #fff;
+}
+.goods-text{
+  flex: 1;
+  padding-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.goods-tit{
+  font-size: 22rpx;
+  color: #666;
+  line-height: 30rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  margin-bottom: 10rpx;
+}
+.goods-fun{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 6rpx;
+}
+.goods-nature,.goods-num{
+  font-size: 22rpx;
+  color: #999;
+  line-height: 40rpx;
+}
+.goods-price{
+  font-size: 26rpx;
+  color: #ff3c1e;
+  line-height: 32rpx;
+}
+.oldprice{
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 32rpx;
+  text-decoration: line-through;
+}
+.number,.freight,.red-packet,.leave-word{
+  width: 710rpx;
+  padding: 28rpx 20rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1rpx solid #f5f5f5;
+}
+.modal-text{
+  font-size: 26rpx;
+  color: #333;
+}
+.stepper{
+  display: flex;
+}
+.stepper-add,.stepper-reduct{
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #1b1b1b;
+  text-align: center;
+  line-height: 40rpx;
+  background: #ccc;
+}
+.stepper-num{
+  font-size: 30rpx;
+  color: #1b1b1b;
+  display: block;
+  width: 60rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background: #efefef;
+}
+.textarea{
+  flex: 1;
+  margin-left: 25rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 730rpx;
+  padding-left: 20rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.total{
+  font-size: 34rpx;
+  color: #ff3c1e;
+  line-height: 100rpx;
+}
+.submit{
+  display: block;
+  width: 270rpx;
+  height: 100rpx;
+  background-color: #ff3c1e;
+  font-size: 40rpx;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+}

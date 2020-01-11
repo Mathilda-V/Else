@@ -1,0 +1,76 @@
+<view class='mustSnatch'>
+  <view class="fixed-con">
+    <swiper indicator-dots="{{false}}" circular="true" autoplay="{{true}}" interval="{{4000}}" duration="{{500}}" class="swiper">
+      <block wx:for="{{ad_list}}" wx:key="item">
+        <swiper-item>
+          <image class="pic" src="{{item.image}}" data-item="{{item}}" bindtap='bindweb' ></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 时间段 --> 
+    <scroll-view class='period-area' scroll-x="{{true}}">
+      <view 
+        class='period-block'
+        wx:for="{{periodList}}" 
+        wx:for-item="period" 
+        wx:key="index">
+        <view data-index="{{index}}" class="period-con {{index == currentIndex ? 'active' : ''}}" bindtap="changePeriod">
+          <text class='period-text'>{{period.period}}</text>
+          <text class='period-status'>{{period.title}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="scroller">
+    <view class='count-else'>
+      <view class='else-box'></view>
+      <block wx:if="{{remainTime.length > 0}}">
+        <text class='else-txt'>距离开始仅剩</text>
+        <text class='else-time'>{{remainTime}}</text>
+      </block>
+      <text class='else-txt' wx:else>正在抢购</text>
+      <view class='else-box'></view>
+    </view>
+    <!-- 抢购 -->
+    <block wx:for="{{productList}}" wx:key="item.brand_info.id" wx:for-index="i">
+      <view class='panic-goods' data-product="{{product}}" wx:for="{{item.panic_product_list}}" wx:for-item="product" wx:for-index="j" wx:key="product.id" bindtap="toProductDetail">
+        <view class='panic-left'>
+          <image class='panic-pic' src="{{product.product_info.thumbnail}}"></image>
+          <view class='info-con'>
+            <text class="title">{{product.product_info.title}}</text>
+            <text class="subtitle">{{product.product_info.subtitle}}</text>
+            <view wx:if="{{periodList[currentIndex].status !== '3'}}">
+              <text class="rmb">￥</text>
+              <text class='price'>{{product.price}}</text>
+            </view>
+            <view wx:else>
+              <text class="rmb text-green">￥</text>
+              <text class="price text-green">{{product.price}}</text>
+            </view>
+          </view>
+        </view> 
+        <view class='panic-right' wx:if="{{periodList[currentIndex].status !== '3'}}">
+          <image class='pro-pic' src="/static/img/qiangtui@3x.png"></image>
+          <text class='pro-num'>已抢{{product.BuyingRate}}%</text>
+          <view class='pro-line'>
+            <progress percent="{{product.BuyingRate}}" color="#ff4332" active />
+          </view>
+          
+          <view class='pro-btn'>
+            <text class='btn-ui'>马上兑</text>
+            <image class='btn-pic' src="/static/img/icon21x@3x.png"></image>          
+          </view>
+        </view>         
+        <view class='panic-right' wx:else>
+          <image class='pro-pic' src="/static/img/qiangtui@3x.png"></image>
+          <text class='pro-num text-green'>{{product.personalNum}}人</text>
+          <text class='pro-num text-green'>已关注</text>
+          <view class='pro-btn btn-green' data-item="{{product}}" catchtap='PanicBuyTip'>
+            <image class='btn-sj' src="/static/img/sj@3x.png"></image> 
+            <text class='btn-ui' >{{product.isPanic == '1'?'已提醒':'提醒我'}}</text>   
+          </view>
+        </view>         
+      </view>
+    </block>
+  </view>
+</view>
