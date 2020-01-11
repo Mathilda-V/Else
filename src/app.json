@@ -1,0 +1,123 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    
+    "pages/index/city/city",
+    "pages/index/search/search",
+    "pages/index/nowSnatch/nowSnatch",
+    "pages/index/nowSnatch/nowSnatchReady/nowSnatchReady",
+    "pages/index/nowSnatch/nowSnatchApply/nowSnatchApply",
+    "pages/index/zeroHelpAvoid/zeroHelpAvoid",
+    "pages/index/zeroHelpAvoid/zeroSnatch/zeroSnatch",
+    "pages/index/zeroHelpAvoid/zeroSnatch/zeroSnatchFriend/zeroSnatchFriend",
+    "pages/index/zeroHelpAvoid/zeroSnatch/zeroSnatchFriendOk/zeroSnatchFriendOk",
+    "pages/index/earnMoney/earnMoney",
+    "pages/index/earnMoney/earnMoneyShare/earnMoneyShare",
+    "pages/index/womanCloth/womanCloth", 
+    "pages/index/detail/detail",
+    "pages/index/leisure/leisure",
+    "pages/index/delicious/delicious",
+    "pages/index/hotel/hotel",
+    "pages/index/confirmOrder/confirmOrder",
+    "pages/index/confirmOrders/confirmOrders",
+    "pages/index/payCheck/payCheck",
+    "pages/index/more/more",
+    "pages/center/rechargeCash/bill/bill",    
+    
+    "pages/shop/shop",
+    "pages/shop/food/food",
+    "pages/shop/hotel/hotel",
+    "pages/shop/clothing/clothing",
+    "pages/shop/entertainment/entertainment",
+    "pages/shop/shopEvalue/shopEvalue",
+    "pages/shop/shopFacil/shopFacil",    
+    "pages/shop/shopDetail/shopDetail",
+    
+    "pages/cart/cart",
+
+    "pages/center/center",
+    "pages/center/authorization/authorization",
+    "pages/center/authorization/Binding/Binding",
+    "pages/center/setting/setting",
+    "pages/center/sign/sign",
+    "pages/center/merchant/merchant",
+    "pages/center/merchant/BabyManagement/BabyManagement",
+    "pages/center/merchant/order/order",
+    "pages/center/merchant/order/orderDetail/orderDetail",
+    "pages/center/merchant/order/orderAfter/orderAfter",
+    "pages/center/service/service",
+    "pages/center/supply/supply",
+    "pages/center/bankcard/bankcard",
+    "pages/center/bankcard/untied/untied",
+    "pages/center/bankcard/add/add",
+    "pages/center/bankcard/fillInInfo/fillInInfo",
+    "pages/center/addmanage/addmanage",
+    "pages/center/addmanage/addmodify/addmodify",
+    "pages/center/order/order",
+    "pages/center/order/orderDetail/orderDetail",
+    "pages/center/order/orderAfter/orderAfter",
+    "pages/center/order/publicationEvl/publicationEvl",
+    "pages/center/myInvite/myInvite",
+    "pages/center/myInvite/inviteBar/inviteBar",
+    "pages/center/rechargeCash/rechargeCash",
+    "pages/center/rechargeCash/cash/cash",
+    "pages/center/rechargeCash/recharge/recharge",
+    "pages/center/rechargeCash/recharge/merchantClassState/merchantClassState",
+    "pages/center/rechargeCash/recharge/memberClassState/memberClassState",
+    "pages/center/redeemCode/redeemCode",
+    "pages/center/redeemCode/sweepCode/sweepCode",
+    "pages/center/ticketBag/ticketBag",
+    "pages/center/ticketBag/platformTicket/platformTicket",
+    "pages/center/ticketBag/storeTicket/storeTicket",
+    "pages/center/ticketBag/clubCard/clubCard",
+    "pages/center/openShop/openShop",
+    "pages/center/openShop/addBusiness/addBusiness",
+    "pages/center/collectionGoods/collectionGoods",
+    "pages/center/collectionShop/collectionShop",
+
+    "pages/WebView/WebView",
+
+    "pages/pay/pay"
+  ],
+  "window": {
+    "navigationBarTitleText": "就去兑",
+    "navigationBarBackgroundColor": "#ff431f"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#f12727",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/img/home@3x.png",
+        "selectedIconPath": "/static/img/home_a@3x.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商家",
+        "iconPath": "/static/img/business@3x.png",
+        "selectedIconPath": "/static/img/business_a@3x.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/static/img/shop@3x.png",
+        "selectedIconPath": "/static/img/shop_a@3x.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "/static/img/user@3x.png",
+        "selectedIconPath": "/static/img/user_a@3x.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}
